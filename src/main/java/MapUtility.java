@@ -368,6 +368,7 @@ public class MapUtility extends PApplet {
             case SAVE_MAP:
                 title = new TextElement("Map Name", width/2, height/4);
                 input = new TextInput(width/2, height/2, 20, 25, height/10);
+                if(fileName != "") ((TextInput)input).text = fileName;
                 guiElements.put("title", title);
                 guiElements.put("input", input);
                 break;
@@ -501,6 +502,7 @@ public class MapUtility extends PApplet {
                 y++;
             }
             lineScanner.close();
+            fileName = mapFile.getName().substring(0, mapFile.getName().length() - 5);
             return true;
         }catch(Exception e){
             System.out.println("Error loading map: " + e.getMessage());
