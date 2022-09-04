@@ -55,9 +55,6 @@ public class MapUtility extends PApplet {
     public void draw(){
         background(0, 0, 255);
         drawBackground();
-        // Print the current state
-        System.out.println(state);
-
         switch(state){
             case EDIT:
                 edit();
@@ -368,7 +365,7 @@ public class MapUtility extends PApplet {
             case SAVE_MAP:
                 title = new TextElement("Map Name", width/2, height/4);
                 input = new TextInput(width/2, height/2, 20, 25, height/10);
-                if(fileName != "") ((TextInput)input).text = fileName;
+                if(fileName != "" && fileName != null) ((TextInput)input).text = fileName;
                 guiElements.put("title", title);
                 guiElements.put("input", input);
                 break;
