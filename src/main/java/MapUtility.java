@@ -1,10 +1,9 @@
-import processing.core.PApplet;
-
 import processing.core.*;
 
 import java.io.File;
 import java.io.PrintWriter;
 import java.util.*;
+
 public class MapUtility extends PApplet {
     // Global variables
     public static EventHandler eventHandler;
@@ -159,8 +158,8 @@ public class MapUtility extends PApplet {
                     ((TextInput)focused).removeChar();
                 }
                 if(keyCode == ENTER){
-                    focused = null;
                     fileName = ((TextInput)focused).text;
+                    focused = null;
                     changeState(programState.SAVE);
                 }
                 break;

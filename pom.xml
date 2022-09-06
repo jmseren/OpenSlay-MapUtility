@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>me.jmser</groupId>
     <artifactId>open-slay-map-utility</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <profiles>
         <profile>
             <id>platform-mac</id>
@@ -33,6 +33,7 @@
         
     </dependencies>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>11</maven.compiler.release>
     </properties>
     <repositories>
